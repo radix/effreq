@@ -8,6 +8,8 @@ effreq
 `Effect`_ library to isolate the purely functional part from the
 side-effecting part.
 
+.. _`Effect`: https://warehouse.python.org/project/effect/
+
 Thanks
 ======
 
