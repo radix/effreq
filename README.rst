@@ -10,6 +10,12 @@ side-effecting part.
 
 .. _`Effect`: https://warehouse.python.org/project/effect/
 
+Status: Alpha
+=============
+
+Right now ``effreq`` is in alpha, and is likely to change incompatibly. Once it's
+being used in production, I'll release a final version.
+
 Thanks
 ======
 
