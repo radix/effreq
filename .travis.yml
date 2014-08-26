@@ -7,6 +7,7 @@ python:
 install:
     - pip install -r dev-requirements.txt
     - pip install --pre effect
+    - pip install characteristic
 script:
     - make lint
     - python -mtesttools.run discover --list

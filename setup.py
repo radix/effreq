@@ -16,5 +16,5 @@ setuptools.setup(
         'Programming Language :: Python :: 3',
         ],
     packages=['effreq'],
-    install_requires=['effect'],
+    install_requires=['effect', 'characteristic'],
     )
