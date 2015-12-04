@@ -10,6 +10,42 @@ side-effecting part.
 
 .. _`Effect`: https://warehouse.python.org/project/effect/
 
+
+You use effreq like this:
+
+.. code:: python
+
+    from effect import sync_perform
+    from effreq.intent import Request
+
+    eff = Effect(Request(method='get', url='http://google.com/'))
+    eff = eff.on(success=lambda response: print(response.code,
+                                                response.headers,
+                                                response.content))
+    sync_perform(eff) # or effect.twisted.perform(eff)
+
+
+IO Backends
+===========
+
+Because effreq uses the Effect library, you can use it in normal blocking code,
+Twisted-using code, and so on. Currently the following IO backends are supported:
+
+- `Twisted`_, via `treq`_
+- `requests`_
+.. _`Twisted`: https://twistedmatrix.com/
+.. _`treq`: https://github.com/dreid/treq/
+
+More to come!
+
+
+Unicode support
+===============
+
+``effreq`` makes use of the URLObject library to parse addresses as IRIs, so
+you can use non-ASCII unicode in both domains and other parts of a network
+address.
+
 Status: Alpha
 =============
 

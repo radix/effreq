@@ -16,5 +16,5 @@ setuptools.setup(
         'Programming Language :: Python :: 3',
         ],
     packages=['effreq'],
-    install_requires=['effect', 'characteristic'],
+    install_requires=['effect', 'characteristic', 'urlobject>=2.4.0'],
     )
